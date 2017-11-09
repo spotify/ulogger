@@ -1,0 +1,13 @@
+[run]
+branch = True
+source =
+    ulogger
+
+[paths]
+source =
+   ulogger
+   .tox/*/lib/python*/site-packages/ulogger
+   .tox/pypy/site-packages/ulogger
+
+[report]
+show_missing = True
