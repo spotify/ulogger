@@ -1,5 +1,7 @@
 # ulogger
 
+[![Build Status](https://travis-ci.com/spotify/ulogger.svg?token=HNDgtYaY2m1seQdhSnyx&branch=master)](https://travis-ci.com/spotify/ulogger) [![Test Coverage](https://codecov.io/github/spotify/ulogger/branch/master/graph/badge.svg)](https://codecov.io/github/spotify/ulogger)
+
 A micro Python logging library.
 
 Supported handlers:
