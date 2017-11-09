@@ -17,7 +17,7 @@ Supported handlers:
 ```sh
 (env) $ pip install ulogger
 # To use the stackdriver handler, you need to specify an extra dependency:
-(env) $ pip install ulogger[stackdriver]
+(env) $ pip install "ulogger[stackdriver]"
 ```
 
 
