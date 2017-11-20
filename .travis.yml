@@ -30,7 +30,6 @@ notifications:
 deploy:
   provider: pypi
   user: spotify_alf
-  server: https://pypi.python.org/pypi
   password:
     secure: "cZIXce50tMziw+vl/UqBoKQuamS6b/LD0Z0E3EpBB75qq2zhqz1lR7rp1jBdmdRB0pfQro+lpwgbmGJVIHPIdpLMr0Po5D1VxcHCENTVZgfdFX/YBDTHElsW39+I5hCuTJV3b1lG0odLNahkAHZbOuFG8YcGYBwA8esktsLlMaTcepSuhH6x+wbzXimnq4v0FiMWVGHZ2HADomn+8e6qcNXWV6OKSVwe23mm3KA7Ytd0AsZVoh07khbrDS2vjh4FVoDQLlzm2H6KegNT/ha1VHiYVtcAw246kk3Rlfj7ZjL4xObxeS/mdL1HIHq7a5PZvCFO4yWOZwFezjo1E3w6I+tsM1bS4z3wZnlYkNfJLgE2fCWskdWlMWUV9S2zTtUD8QqQTRo2V/iTgDlhsbwnovnRIAJu/w7E3jEmZjcZVte2vh21lhgUDouCnps+/jiNNfZ+quwerJ9B8Oo1UNanKvl/Gu7CWnk2yK4nmCQ96ta1D4bXytW+5/765UZsr/ZcMhSWlzWuoFfxyrL2BqI0z09ZPMUWDyxseEQv0g/6b+cfjdrYJNuRzIx+l1AsGluCt+9LDaREaATWvTmH7hQBEvU2UYPkvyBzXkCnWL1xpkUcPAUABLQ941KIeT99u1ZCTCuqSAvc0DB/ljjvaSbX6Xhah7TOhd8b8gkSR6BXe+Y="
   on:
