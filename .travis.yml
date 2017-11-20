@@ -3,9 +3,7 @@ sudo: false
 cache:
   directories:
   - "$HOME/.cache/pip"
-
 language: python
-
 matrix:
   include:
   - python: '2.7'
@@ -18,27 +16,21 @@ matrix:
     env: TOXENV=py36
   - python: pypy2.7-5.8.0
     env: TOXENV=pypy
-
 install:
 - pip install tox
-
 script:
 - tox
-
 before_install:
 - pip install codecov
-
 after_success:
 - tox -e coverage-report
 - codecov
-
 notifications:
   email: false
-
 deploy:
   provider: pypi
   user: spotify_alf
   password:
-    secure: vl9eN23gDrYmsYLmgtZ0SGx0mySXl/p9TEM1Vj34C2lq2j8Iaz9O4HOhRq4aWBHoWfP5CsCcmFn3giJvFCJsSLErub4YfC2hGTn3XTSodgABz4uClgxiKjIgmbhDTMLRMnFshpxHQ6a7ps71YsCq0o+95AGP+bmJkflZ/syyfYmMPLDvWXMZ1baaV/vH/LSkr+48em6jHh18wjV6uKDM7ttqfNRq51G4zoXdNSfmi9RkppXeBbC2ljYjqNmlWZYAD5yx762zCZGaMjE/tjp1SR+SfGFQrXlv7bjtSsjaTlPC60wkNBc/DqV1SVow/NBoaGMRIWUPcVeIlMtDKN2f7eraZj141iI+puCKfBL8qqI9KYSNxElIsLW/IFGtdnyvqKwntBfDndizD8WPRH9VFWbI3QyFMCybYmD4oPcez2mhnnd5Pb0pA+CrVN/lgdBz2ENplEOgWEuxDJCA05hjxVXRrJ92WiHI+F9ui8mUKejYp9O4j3GddZ4Ocsnx9MTtn8pDTtArkGWPK0MX5RIiBwLKvsIGbYLcKF7C9PkRTz6LYN8tSU//aw8KuWNMYOACC1kapxW0OqJjCdcL+kynFmA1DT8JTdwzjdRJfw6IrCntausToczOFO1ME+U8cepsYA74uRnA8wsAHfq2fnJx/jOuNcZIaLsRUcv9cCdcUVk=
+    secure: RGWBTSw8TzUnL79JZEMpyWkaABSU79g40Kz9j1LE49WRhEQzR9lyflNT2qCoT6Lq/p1CqO2EWTCMN6JDhKBja4mxEFk1gdL1keeb/qxImGkk8IB4QRFDc/vkxF++iskq2UEpVe0GopwInrv8kwnVJGHlJamrPFSgiamyJw6OqKK3Pd+SceyXOhHi2wyjWHVmMmlG7lpwqVNMTox86QNbRE65CYWrcTyJbZFxNDyqfKEL+q/gUSHHkMqVlqMfe1cjp0zuv4gZcK26yeGyb40Z//TUEpkj3mQDvaz0xzBybeG98AgPPYJh6fy7WUrAm2/56JPbT8gAXRbA/IP8bZL0KOjt3MlGe1U5ELDKVf9UlzEU+thm/AuAbIbuGGS015ynukBYLxGvcxDudhZKAeutQQtUALBg2y4+jIqSq21e8FwtjESKJ5/LzaLUP6gcButNKrYF4XJtgamCill0yh8wjqxqpGJmATtDqXGeIpm0i1aOUmuduSckbwvs50FxMoJ3E4hoIbiKzyLyIEx1+lQGVYYOZnH5hrOsRknesTF2ex8s4BN7DDThzti29xUPDXO2ZvpblljwnsOoq2/8VTWmujTCixTNAxuuYfOkS67+Wg2ENdVh7eY4wOulFHHJkEOn+dat1PvphUtR9YyWHCD+QPI/Aw0OI9oUgHgGqSdjwc8=
   on:
     tags: true
