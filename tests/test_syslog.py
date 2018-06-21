@@ -150,6 +150,7 @@ args = [
     # ((given address), given proto), (exp address), exp proto)
     ((('localhost', 514), 2), (('localhost', 514), 2)),
     ((('localhost', 514), None), (('localhost', 514), 2)),
+    ((('localhost', '514'), None), (('localhost', 514), 2)),
     ((('10.99.0.1', None), 1), (('10.99.0.1', 514), 1)),
     (('/dev/log', None), ('/dev/log', 2)),
 ]
