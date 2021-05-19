@@ -11,7 +11,7 @@ Supported handlers:
 
 ## Requirements
 
-* Either Python 2.7 or 3.6. Tests pass on Python 3.4, 3.5, and PyPy 5.8 (2.7.13).
+* Python 3.6. Tests pass on Python 3.4, 3.5, and PyPy 7.3.3 (3.6).
 * Support for Linux & OS X
 
 ## To Use
