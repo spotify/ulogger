@@ -2,7 +2,7 @@ cachetools==4.2.2
 google-api-core==1.27.0
 google-auth==1.30.0
 google-cloud-core==1.6.0
-google-cloud-logging==2.4.0
+google-cloud-logging==1.15.1
 googleapis-common-protos==1.53.0
 grpcio==1.37.1
 protobuf==3.17.0
