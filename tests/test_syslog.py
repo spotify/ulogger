@@ -17,6 +17,7 @@
 
 import logging
 import logging.handlers
+import socket
 
 import pytest
 
@@ -136,9 +137,10 @@ params = 'given,exp'
 def test_syslog_handler_builder_facility(given, exp, mocker, monkeypatch):
     monkeypatch.setattr(syslog.sys, 'platform', 'linux2')
 
-    with mocker.patch('socket.socket') as mock_socket:
-        mock_socket.return_value.recv.return_value = True
-        builder = syslog.SyslogHandlerBuilder('foo', facility=given)
+    mock_socket = mocker.Mock()
+    mocker.patch.object(socket, 'socket', mock_socket)
+    mock_socket.return_value.recv.return_value = True
+    builder = syslog.SyslogHandlerBuilder('foo', facility=given)
 
     handler = builder.get_handler()
 
@@ -162,10 +164,11 @@ params = 'given,exp'
 def test_syslog_handler_builder_address(given, exp, mocker, monkeypatch):
     monkeypatch.setattr(syslog.sys, 'platform', 'linux2')
 
-    with mocker.patch('socket.socket') as mock_socket:
-        mock_socket.return_value.recv.return_value = True
-        builder = syslog.SyslogHandlerBuilder(
-            'foo', address=given[0], proto=given[1])
+    mock_socket = mocker.Mock()
+    mocker.patch.object(socket, 'socket', mock_socket)
+    mock_socket.return_value.recv.return_value = True
+    builder = syslog.SyslogHandlerBuilder(
+        'foo', address=given[0], proto=given[1])
 
     handler = builder.get_handler()
 
@@ -217,10 +220,11 @@ def test_syslog_handler_builder_address_envs(given, envs, exp,
     if patch:
         monkeypatch.setattr(syslog.os, 'environ', patch)
 
-    with mocker.patch('socket.socket') as mock_socket:
-        mock_socket.return_value.recv.return_value = True
-        builder = syslog.SyslogHandlerBuilder(
-            'foo', address=given[0], proto=given[1])
+    mock_socket = mocker.Mock()
+    mocker.patch.object(socket, 'socket', mock_socket)
+    mock_socket.return_value.recv.return_value = True
+    builder = syslog.SyslogHandlerBuilder(
+        'foo', address=given[0], proto=given[1])
 
     handler = builder.get_handler()
 
