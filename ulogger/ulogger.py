@@ -17,8 +17,8 @@
 
 from __future__ import absolute_import
 
-from importlib import import_module
 import logging
+from importlib import import_module
 
 from ulogger import exceptions
 
