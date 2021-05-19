@@ -128,6 +128,9 @@ def test_builder_get_handler(mocker, mock_requests_get, mock_logging_resource,
     mocker.patch('ulogger.stackdriver.CloudLoggingHandlerBuilder.get_formatter',
                  mocker.Mock(return_value=mock_formatter))
 
+    get_logger, logger = mock_get_logger
+    get_logger.reset_mock()
+
     factory = stackdriver.CloudLoggingHandlerBuilder(
             'test-program', project_id=project_id, credentials=credentials)
     factory.get_handler()
@@ -145,7 +148,6 @@ def test_builder_get_handler(mocker, mock_requests_get, mock_logging_resource,
     mock_client_class.assert_called_once_with(
         project=expected_project_id, credentials=credentials)
     mock_handler.setFormatter.assert_called_once_with(mock_formatter)
-    get_logger, logger = mock_get_logger
     get_logger.assert_called_once_with(
         'google.cloud.logging.handlers.transports.background_thread')
     logger.setLevel.assert_called_once_with(logging.INFO)
@@ -225,6 +227,8 @@ def test_builder_get_formatter(mocker, mock_requests_get, fmt, datefmt):
 def test_set_worker_thread_level_to_debug(mock_requests_get, mock_get_logger,
                                           mock_gcl_handler, mock_gcl_client):
     get_logger, logger = mock_get_logger
+    get_logger.reset_mock()
+
     stackdriver.CloudLoggingHandlerBuilder(
         'test-progname', debug_thread_worker=True).get_handler()
 
