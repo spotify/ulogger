@@ -12,7 +12,7 @@ Supported handlers:
 
 ## Requirements
 
-* Python 3.6. Tests pass on Python 3.4, 3.5, and PyPy 7.3.3 (3.6).
+* Python 3.6. Tests pass on PyPy 7.3.3 (3.6).
 * Support for Linux & OS X
 
 ## To Use
@@ -182,7 +182,6 @@ If you want to run the test suite for a specific version of Python:
 
     ```sh
     # outside of the virtualenv
-    $ tox -e py34
     $ tox -e py36
     ```
 
