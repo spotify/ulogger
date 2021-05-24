@@ -12,7 +12,7 @@ Supported handlers:
 
 ## Requirements
 
-* Python 3.6. Tests pass on PyPy 7.3.3 (3.6).
+* Python 3.6. Tests also pass on Python 3.7 and 3.8.  PyPy support has been removed due to upstream issues with the grpcio module.
 * Support for Linux & OS X
 
 ## To Use
