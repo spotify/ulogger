@@ -66,7 +66,7 @@ PACKAGES = find_packages(where='.')
 META_PATH = os.path.join(NAME, '__init__.py')
 KEYWORDS = ['logging']
 CLASSIFIERS = [
-    'Development Status :: 4 - Beta',
+    'Development Status :: 5 - Production/Stable',
     'License :: OSI Approved :: Apache Software License',
     'Natural Language :: English',
     'Operating System :: POSIX :: Linux',
