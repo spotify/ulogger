@@ -86,7 +86,7 @@ def test_setup_logging_multiple_handlers(import_module_mock,
     handlers = ['stream', 'syslog']
     ulogger.setup_logging('tests', 'INFO', handlers)
     logger = logging.getLogger('')
-    actual_handlers = logger.handlers
+    actual_handlers = [h for h in logger.handlers if h.level != logging.NOTSET]
     assert len(actual_handlers) == len(handlers)
 
 

@@ -79,13 +79,7 @@ class SyslogHandlerBuilder:
 
     def _get_address(self, address):
         if address:
-            # python 2/3 compatibility
-            try:
-                basestring
-            except NameError:
-                basestring = str
-
-            if not isinstance(address, basestring):
+            if not isinstance(address, str):
                 if len(address) == 2:
                     if address[1] is None:
                         address = (address[0], logging.handlers.SYSLOG_UDP_PORT)
