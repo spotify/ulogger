@@ -62,7 +62,7 @@ def install_requires():
 # Project-specific constants
 #####
 NAME = 'ulogger'
-PACKAGES = find_packages(where='.')
+PACKAGES = find_packages(exclude=['tests*'])
 META_PATH = os.path.join(NAME, '__init__.py')
 KEYWORDS = ['logging']
 CLASSIFIERS = [
