@@ -19,7 +19,7 @@ from __future__ import absolute_import
 from ulogger.ulogger import setup_logging
 
 __author__ = 'Lynn Root'
-__version__ = '2.0.0'
+__version__ = '2.0.1'
 __license__ = 'Apache 2.0'
 __email__ = 'lynn@spotify.com'
 __description__ = 'Micro logging library'
