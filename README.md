@@ -1,6 +1,6 @@
 # ulogger
 
-[![Build Status](https://travis-ci.org/spotify/ulogger.svg?branch=master)](https://travis-ci.org/spotify/ulogger) [![Test Coverage](https://codecov.io/github/spotify/ulogger/branch/master/graph/badge.svg)](https://codecov.io/github/spotify/ulogger)
+[![Build Status](https://github.com/spotify/ulogger/actions/workflows/main.yml/badge.svg)](https://github.com/spotify/ulogger/actions/workflows/main.yml) [![Test Coverage](https://codecov.io/github/spotify/ulogger/branch/master/graph/badge.svg)](https://codecov.io/github/spotify/ulogger)
 
 A micro Python logging library.
 
