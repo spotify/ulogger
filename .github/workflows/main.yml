@@ -11,13 +11,7 @@ jobs:
     runs-on: ubuntu-18.04
     strategy:
       matrix:
-        include:
-          - python-version: 3.6
-            TOXENV: "py36"
-          - python-version: 3.7
-            TOXENV: "py37"
-          - python-version: 3.8
-            TOXENV: "py38"
+        python-version: [3.6, 3.7, 3.8]
     steps:
       - name: Check out repository
         uses: actions/checkout@v2
