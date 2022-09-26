@@ -5,7 +5,7 @@ google-cloud-core==1.6.0
 google-cloud-logging==1.15.1
 googleapis-common-protos==1.53.0
 grpcio==1.37.1
-protobuf==3.17.0
+protobuf==3.18.3
 py==1.10.0
 pyasn1==0.4.8
 pyasn1-modules==0.2.8
