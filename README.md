@@ -12,7 +12,7 @@ Supported handlers:
 
 ## Requirements
 
-* Python 3.6. Tests also pass on Python 3.7 and 3.8.  PyPy support has been removed due to upstream issues with the grpcio module.
+* Python 3.7. Tests also pass on Python 3.8.  PyPy support has been removed due to upstream issues with the grpcio module.
 * Support for Linux & OS X
 
 ## To Use
@@ -182,7 +182,7 @@ If you want to run the test suite for a specific version of Python:
 
     ```sh
     # outside of the virtualenv
-    $ tox -e py36
+    $ tox -e py37
     ```
 
 To run an individual test, call `pytest` directly:
