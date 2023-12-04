@@ -20,15 +20,16 @@ from __future__ import absolute_import
 import logging
 
 import requests
-from google.cloud import logging as gcl_logging
-from google.cloud.logging import handlers as gcl_handlers
-from google.cloud.logging import resource as gcl_resource
+from google.cloud import logging_v2 as gcl_logging
+from google.cloud.logging_v2 import handlers as gcl_handlers
+from google.cloud.logging_v2 import resource as gcl_resource
 
 from ulogger import exceptions
 
 
 class CloudLoggingHandlerBuilder:
-    """Creates instances of `google.cloud.logging.handlers.CloudLoggingHandler`
+    """Creates instances of
+    `google.cloud.logging_v2.handlers.CloudLoggingHandler`
 
     Instances of the handler will be configured by retrieving the host's
     metadata. It can send logs to a different GCP project than the host
@@ -134,7 +135,7 @@ class CloudLoggingHandlerBuilder:
         coming from.
 
         Returns:
-            (obj): Instance of `google.cloud.logging.resource.Resource`
+            (obj): Instance of `google.cloud.logging_v2.resource.Resource`
         """
 
         return gcl_resource.Resource('gce_instance', {
@@ -164,7 +165,7 @@ class CloudLoggingHandlerBuilder:
         """Sets logging level of the background logging thread to DEBUG or INFO
         """
         bthread_logger = logging.getLogger(
-            'google.cloud.logging.handlers.transports.background_thread')
+            'google.cloud.logging_v2.handlers.transports.background_thread')
         if self.debug_thread_worker:
             bthread_logger.setLevel(logging.DEBUG)
         else:
@@ -174,7 +175,7 @@ class CloudLoggingHandlerBuilder:
         """Create a fully configured CloudLoggingHandler.
 
         Returns:
-            (obj): Instance of `google.cloud.logging.handlers.
+            (obj): Instance of `google.cloud.logging_v2.handlers.
                                 CloudLoggingHandler`
         """
 
@@ -202,7 +203,7 @@ def get_handler(progname, fmt=None, datefmt=None, project_id=None,
     and supported keyword arguments.
 
     Returns:
-        (obj): Instance of `google.cloud.logging.handlers.
+        (obj): Instance of `google.cloud.logging_v2.handlers.
                             CloudLoggingHandler`
     """
     builder = CloudLoggingHandlerBuilder(

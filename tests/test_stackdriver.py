@@ -149,7 +149,7 @@ def test_builder_get_handler(mocker, mock_requests_get, mock_logging_resource,
         project=expected_project_id, credentials=credentials)
     mock_handler.setFormatter.assert_called_once_with(mock_formatter)
     get_logger.assert_called_once_with(
-        'google.cloud.logging.handlers.transports.background_thread')
+        'google.cloud.logging_v2.handlers.transports.background_thread')
     logger.setLevel.assert_called_once_with(logging.INFO)
 
 
@@ -233,5 +233,5 @@ def test_set_worker_thread_level_to_debug(mock_requests_get, mock_get_logger,
         'test-progname', debug_thread_worker=True).get_handler()
 
     get_logger.assert_called_once_with(
-        'google.cloud.logging.handlers.transports.background_thread')
+        'google.cloud.logging_v2.handlers.transports.background_thread')
     logger.setLevel.assert_called_once_with(logging.DEBUG)
